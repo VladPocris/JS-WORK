@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #c0c1ec;
+}
+
+.container {
+  display: block;
+  text-align: center;
+}
+
+h1 {
+  background-color: lightyellow;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#text-input {
+  min-width: 80%;
+  min-height: 120px;
+  font-size: 1.2rem;
+  resize: none;
+  border-radius: 6px;
+  box-shadow: 1px 1px 10px gray;
+}
+
+#text-input:focus {
+  outline: none;
+  box-shadow: 1px 1px 10px lightyellow;
+}
+
+#char-count {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    color: darkslategray;
+    font-weight: bold;
+}
