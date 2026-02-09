@@ -25,6 +25,8 @@ const statusMsg = document.getElementById("status");
 
 themeSwitcherBtn.addEventListener("click", () => {
   themeDropdown.hidden = !themeDropdown.hidden;
+  const isExpanded = themeSwitcherBtn.getAttribute("aria-expanded") === "true"; 
+  themeSwitcherBtn.setAttribute("aria-expanded", !isExpanded);
 })
 
 themeMenuButtons.forEach(btn => {
@@ -32,8 +34,7 @@ themeMenuButtons.forEach(btn => {
     const themeName = btn.getAttribute("value");
     bodyElement.className = `theme-${themeName}`;
     themeDropdown.hidden = true;
-    statusMsg.textContent = themes.filter(t => {
-      return t.name === themeName;
-    })[0].message;
+    const theme = themes.find(t => t.name === themeName);
+    statusMsg.textContent = theme.message;
   })
 });
