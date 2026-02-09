@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Switcher</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body class="theme-light">
+  <button class="dropdown-btn" id="theme-switcher-button" aria-haspopup="true" aria-expanded="false" aria-controls="theme-dropdown">Switch Theme</button>
+  <ul class="dropdown-content" id="theme-dropdown" role="menu" aria-labelledBy="theme-switcher-button" hidden>
+    <li class="dropdown-item" role="menuitem" id="theme-light" value="light">Light</li>
+    <li class="dropdown-item" role="menuitem" id="theme-dark" value="dark">Dark</li>
+    <li class="dropdown-item" role="menuitem" id="theme-ocean" value="ocean">Ocean</li>
+    <li class="dropdown-item" role="menuitem" id="theme-nord" value="nord">Nord</li>
+  </ul>
+  <p aria-live="polite" id="status"></p>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
